@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .header {
+    background: url('chef.webp') no-repeat center center/cover;
+    color: rgb(255, 166, 0);
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+h1{
+    text-shadow: 10px 10px 10px rgb(255, 255, 255);
+}
+  .header p {
+    font-size: 1.2em;
+  }
+ 
+  .about {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+  }
+  
+  .about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+  .about-content{
+    background: url('N&B.jpeg') no-repeat center center/cover;
+    min-height: 680px;
+    background-size:cover;
+  }
+  
+  .about-images {
+    display: flex;
+    justify-content: center;
+    gap: 667px;
+  }
+  
+  .about-images img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.3s;
+    opacity: 0.8;
+  }
+  .about-images img:hover{
+        border-radius: 50%;
+        opacity: 1;
+    }
+ 
+ 
+  .experience {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .experience h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .experience-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .experience-images img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-content div {
+    max-width: 300px;
+  }
+  
+  .footer-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .footer-content p {
+    font-size: 1em;
+  }
+  
+  @media (max-width: 768px) {
+    .about-images,
+    .experience-images,
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-images img,
+    .experience-images img {
+      width: 80%;
+    }
+  }
