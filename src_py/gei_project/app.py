@@ -11,7 +11,7 @@ recipes_collection = db["recipes"]
 
 @app.route('/')
 def index():
-    return 'Flask-приложение работает! Попробуй POST /recipes'
+    return 'Flask-приложение работает!БД MongoDB подключена!'
 
 @app.route('/recipes', methods=['POST'])
 def get_recipes():
