@@ -3,17 +3,21 @@ from flask_cors import CORS
 from pymongo import MongoClient
 
 app = Flask("D&K")
-CORS(app)  
+CORS(app)
 
 client = MongoClient("mongodb://localhost:27017/")  
 db = client["cookit"]  
 recipes_collection = db["recipes"]  
 
+@app.route('/')
+def index():
+    return 'Flask-приложение работает! Попробуй POST /recipes'
+
 @app.route('/recipes', methods=['POST'])
 def get_recipes():
     data = request.json
     ingredients = data.get('ingredients', [])
-    
+
     if not ingredients:
         return jsonify([])
 
@@ -26,6 +30,5 @@ def get_recipes():
     ]
     return jsonify(result)
 
-# Запуск сервера
-if "D&K" == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
