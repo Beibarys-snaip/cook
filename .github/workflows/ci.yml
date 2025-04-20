@@ -26,5 +26,6 @@ jobs:
         continue-on-error: true
         run: flake8 src_py/gei_project/
 
-      - name: Run pytest (unit tests)
-        run: pytest src_py/gei_project/
+      - name: Run tests
+        run: pytest src_py/gei_project/tests
+
